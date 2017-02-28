@@ -13,17 +13,17 @@ In this app I have practiced with:
   7. Debugging.
   8. Customizing ArrayAdapter for Spinner.
   
-I would especially like to note tha last point besause as I have known the question "How to customize Spinner and Array Adapter" behaviour is very popular. So I present my point of view how this problem can be solved. There some key features have been implemented:
-  1. Layout for ListItem and DropDownList is distinct from default one. There is only drawables.
-  2. Supplying Promt in Spinner via different layout. This also solves initial item selection problem of Spinner.
+I would especially like to note the last point besause as I have known the question "How to customize Spinner and Array Adapter behaviour" is very popular. So I present my point of view how this problem can be solved. There some key features have been implemented:
+  1. Layout for ListItem and DropDownList is distinct from default one. There are only drawables.
+  2. Supplying Promt in Spinner via different layout. It also solves initial item selection problem of Spinner.
   3. Styling items in the DropDown List.
   
 Copyrights:
-I have used some graphical resources and there is links to sources:
+I have used some graphical resources and there are links to sources:
 App Icon (CC0 Public Domain): 
 https://pixabay.com/ru/%D1%84%D1%83%D1%82%D0%B1%D0%BE%D0%BB-%D1%88%D0%B0%D1%80-%D1%8F%D0%B9%D1%86%D0%BE-%D0%B0%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9-%D1%84%D1%83%D1%82%D0%B1%D0%BE%D0%BB-297151/
 
-Logos of NFL teams(Fair Use - because this is educational project to discover some approaches to solve problems):
+Logos of NFL teams(Fair Use - because it is an educational project to discover some approaches for solving learning task):
 1. Buffalo Bills Logo. By Source, Fair use, https://en.wikipedia.org/w/index.php?curid=18272265
 2. Miami Dolphins logo. By Source, Fair use, https://en.wikipedia.org/w/index.php?curid=40154833
 3. New England Patriots logo. By Source, Fair use, https://en.wikipedia.org/w/index.php?curid=18256701

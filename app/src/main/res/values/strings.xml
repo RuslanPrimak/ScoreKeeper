@@ -1,0 +1,42 @@
+<!--
+  ~ Created by Ruslan Primak on 2/28/17 6:34 PM
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 2/27/17 6:23 AM
+  -->
+
+<resources>
+    <string name="app_name">Score Keeper</string>
+    <string name="main_header">National Football League (AFC)</string>
+    <string name="team_header">Team</string>
+    <string name="spinner_team_description">spinner</string>
+    <string name="btnFG_Full">Field goal</string>
+    <string name="btnFG_Short">FG</string>
+    <string name="btnFG">@string/btnFG_Short</string>
+    <string name="btnFG_CD">Score Field goal Points</string>
+    <string name="btnTD_Full">Touchdown</string>
+    <string name="btnTD_Short">TD</string>
+    <string name="btnTD">@string/btnTD_Short</string>
+    <string name="btnTD_CD">Score Touchdown Points</string>
+    <string name="btnSF">Safety</string>
+    <string name="btnSF_CD">Score Safety Points</string>
+    <string name="btnEPG">Goal</string>
+    <string name="btnEPG_CD">Score Goal Extra Points</string>
+    <string name="btnEPT_Full">Touchdown</string>
+    <string name="btnEPT_Short">TD</string>
+    <string name="btnEPT">@string/btnEPT_Short</string>
+    <string name="btnEPT_CD">Score Touchdown Extra Points</string>
+    <string name="extra_points">Extra points available!</string>
+    <string name="reset_button">Reset</string>
+    <string name="image_view_team_logo_cd">Team\'s logo</string>
+    <string name="image_view_team_wordwark_cd">Team\'s wordwark</string>
+    <string name="initial_score">0</string>
+    <string name="btnEPCancel">Cancel</string>
+    <string name="btnEPCancel_CD">Cancel scoring Extra Points</string>
+    <string name="score_points">Score Points</string>
+    <string name="team_spinner_item_hint">Select a team…</string>
+    <string name="tag_team_a">TEAM A</string>
+    <string name="tag_team_b">TEAM B</string>
+    <string name="toast_team_not_selected">You have to select a team first!</string>
+
+</resources>

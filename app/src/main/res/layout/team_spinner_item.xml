@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Ruslan Primak on 2/28/17 6:34 PM
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 2/28/17 6:16 PM
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/team_spinner_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/spinner_logo_width_height"
+    android:padding="8dp">
+
+    <View
+        android:id="@+id/spinner_item_center_divider"
+        android:layout_width="8dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#00000000" />
+
+    <ImageView
+        android:id="@+id/team_spinner_item_image_view_logo"
+        android:layout_width="@dimen/spinner_logo_width_height"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/spinner_item_center_divider"
+        android:layout_toStartOf="@id/spinner_item_center_divider"
+        android:contentDescription="@string/image_view_team_logo_cd"
+        android:scaleType="fitEnd"
+        tools:src="@drawable/logo_1" />
+
+    <ImageView
+        android:id="@+id/team_spinner_item_image_view_wordmark"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/spinner_item_center_divider"
+        android:layout_toRightOf="@id/spinner_item_center_divider"
+        android:contentDescription="@string/image_view_team_wordwark_cd"
+        android:scaleType="fitStart"
+        tools:src="@drawable/wordmark_1" />
+
+
+</RelativeLayout>
+
+
+

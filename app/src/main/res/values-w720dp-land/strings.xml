@@ -1,0 +1,12 @@
+<!--
+  ~ Created by Ruslan Primak on 2/28/17 6:34 PM
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 2/27/17 6:24 AM
+  -->
+
+<resources>
+    <string name="btnFG">@string/btnFG_Full</string>
+    <string name="btnTD">@string/btnTD_Full</string>
+    <string name="btnEPT">@string/btnEPT_Full</string>
+</resources>

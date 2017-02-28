@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Ruslan Primak on 2/28/17 6:34 PM
+  ~ Copyright (c) 2017. All rights reserved.
+  ~
+  ~ Last modified 2/26/17 11:09 PM
+  -->
+
+<resources>
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="colorPrimaryDark">#01579B</color>
+    <color name="colorAccent">#E65100</color>
+    <color name="colorButtonNormal">#03A9F4</color>
+</resources>

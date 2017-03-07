@@ -12,6 +12,7 @@ In this app I have practiced with:
   6. Using Styles.
   7. Debugging.
   8. Customizing ArrayAdapter for Spinner.
+  9. Transitions.
   
 I would especially like to note the last point besause as I have known the question "How to customize Spinner and Array Adapter behaviour" is very popular. So I present my point of view how this problem can be solved. There some key features have been implemented:
   1. Layout for ListItem and DropDownList is distinct from default one. There are only drawables.

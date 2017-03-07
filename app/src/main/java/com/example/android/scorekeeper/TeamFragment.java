@@ -179,8 +179,8 @@ public class TeamFragment extends Fragment {
      */
     private void setPointLayoutsVisibility(boolean isVisible) {
         if (isVisible) {
-            mLayoutExtraPoints.setVisibility(View.VISIBLE);
             mLayoutScorePoints.setVisibility(View.GONE);
+            mLayoutExtraPoints.setVisibility(View.VISIBLE);
         } else {
             mLayoutExtraPoints.setVisibility(View.GONE);
             mLayoutScorePoints.setVisibility(View.VISIBLE);
@@ -277,7 +277,7 @@ public class TeamFragment extends Fragment {
     /**
      * Interface listener for events in fragment
      */
-    public interface FragmentButtonOnClickListener {
+    interface FragmentButtonOnClickListener {
         void onButtonClick(View view); // on button clicked
 
         void onItemSelected(int position); // when item has been selected

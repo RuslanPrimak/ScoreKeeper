@@ -8,23 +8,29 @@
 package com.example.android.scorekeeper;
 
 import android.os.Bundle;
+import android.support.transition.TransitionManager;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewGroup;
 
 public class MainActivity extends AppCompatActivity
         implements TeamFragment.FragmentButtonOnClickListener {
 
-    // references to implementations of the ResettableOnClickListener in fragments for teams
+    // references to the fragments for teams
     private TeamFragment mTeamA;
     private TeamFragment mTeamB;
+
+    private ViewGroup mSceneRoot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // get listeners for fragments
+        mSceneRoot = (ViewGroup) findViewById(R.id.activity_main);
+
+        // get fragments
         FragmentManager fm = getSupportFragmentManager();
         mTeamA = (TeamFragment) fm.findFragmentById(R.id.team_a_frag);
         mTeamB = (TeamFragment) fm.findFragmentById(R.id.team_b_frag);
@@ -32,12 +38,13 @@ public class MainActivity extends AppCompatActivity
 
 
     /**
-     * Broadcast OnButtonClick event from one fragment through other
+     * Broadcast OnButtonClick event among fragments
      *
      * @param view - button clicked
      */
     @Override
     public void onButtonClick(View view) {
+        TransitionManager.beginDelayedTransition(mSceneRoot);
         mTeamA.anotherButtonClicked(view);
         mTeamB.anotherButtonClicked(view);
     }

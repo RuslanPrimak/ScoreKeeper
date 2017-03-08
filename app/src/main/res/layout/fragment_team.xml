@@ -4,108 +4,110 @@
   ~
   ~ Last modified 2/28/17 6:16 PM
   -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.android.scorekeeper.TeamFragment">
-
-    <!-- Select a team -->
-    <Spinner
-        android:id="@+id/spinner_team"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_margin="@dimen/activity_vertical_margin"
-        android:background="@color/colorButtonNormal"
-        tools:listitem="@layout/team_spinner_item" />
+        android:layout_height="match_parent"
+        tools:context="com.example.android.scorekeeper.TeamFragment">
 
-    <!-- Show the team score -->
-    <TextView
-        android:id="@+id/text_view_score"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/spinner_team"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:gravity="center"
-        android:text="@string/initial_score"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/score_text_size" />
+        <!-- Select a team -->
+        <Spinner
+            android:id="@+id/spinner_team"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:background="@color/colorButtonNormal"
+            tools:listitem="@layout/team_spinner_item" />
 
-    <LinearLayout
-        android:id="@+id/layoutMainButtons"
-        style="@style/score_buttons_layout_style">
-
+        <!-- Show the team score -->
         <TextView
-            style="@style/score_buttons_text_header_style"
-            android:text="@string/score_points"
-            android:textColor="@android:color/black" />
+            android:id="@+id/text_view_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner_team"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:gravity="center"
+            android:text="@string/initial_score"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/score_text_size" />
 
-        <LinearLayout style="@style/score_buttons_bar_style">
+        <LinearLayout
+            android:id="@+id/layoutMainButtons"
+            style="@style/score_buttons_layout_style">
 
-            <Button
-                android:id="@+id/btnTouchdown"
-                style="@style/button_score_style"
-                android:contentDescription="@string/btnTD_CD"
-                android:text="@string/btnTD"
-                tools:ignore="ButtonStyle" />
+            <TextView
+                style="@style/score_buttons_text_header_style"
+                android:text="@string/score_points"
+                android:textColor="@android:color/black" />
 
-            <Button
-                android:id="@+id/btnFieldGoal"
-                style="@style/button_score_style"
-                android:contentDescription="@string/btnFG_CD"
-                android:text="@string/btnFG"
-                tools:ignore="ButtonStyle" />
+            <LinearLayout style="@style/score_buttons_bar_style">
 
-            <Button
-                android:id="@+id/btnSafety"
-                style="@style/button_score_style"
-                android:text="@string/btnSF"
-                tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/btnTouchdown"
+                    style="@style/button_score_style"
+                    android:contentDescription="@string/btnTD_CD"
+                    android:text="@string/btnTD"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/btnFieldGoal"
+                    style="@style/button_score_style"
+                    android:contentDescription="@string/btnFG_CD"
+                    android:text="@string/btnFG"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/btnSafety"
+                    style="@style/button_score_style"
+                    android:text="@string/btnSF"
+                    tools:ignore="ButtonStyle" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layoutExtraPoints"
+            style="@style/score_buttons_layout_style"
+            android:visibility="gone"
+            tools:layout_below="@id/layoutMainButtons"
+            tools:visibility="visible">
 
-    <LinearLayout
-        android:id="@+id/layoutExtraPoints"
-        style="@style/score_buttons_layout_style"
-        android:visibility="gone"
-        tools:layout_below="@id/layoutMainButtons"
-        tools:visibility="visible">
+            <TextView
+                style="@style/score_buttons_text_header_style"
+                android:text="@string/extra_points"
+                android:textAllCaps="true"
+                android:textColor="#CC0000" />
 
-        <TextView
-            style="@style/score_buttons_text_header_style"
-            android:text="@string/extra_points"
-            android:textAllCaps="true"
-            android:textColor="#CC0000" />
+            <LinearLayout style="@style/score_buttons_bar_style">
 
-        <LinearLayout style="@style/score_buttons_bar_style">
+                <Button
+                    android:id="@+id/btnExtraPointTouchdown"
+                    style="@style/button_score_style"
+                    android:text="@string/btnEPT"
+                    tools:ignore="ButtonStyle" />
 
-            <Button
-                android:id="@+id/btnExtraPointTouchdown"
-                style="@style/button_score_style"
-                android:text="@string/btnEPT"
-                tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/btnExtraPointGoal"
+                    style="@style/button_score_style"
+                    android:text="@string/btnEPG"
+                    tools:ignore="ButtonStyle" />
 
-            <Button
-                android:id="@+id/btnExtraPointGoal"
-                style="@style/button_score_style"
-                android:text="@string/btnEPG"
-                tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/btnExtraPointCancel"
+                    style="@style/button_score_style"
+                    android:text="@string/btnEPCancel"
+                    tools:ignore="ButtonStyle" />
 
-            <Button
-                android:id="@+id/btnExtraPointCancel"
-                style="@style/button_score_style"
-                android:text="@string/btnEPCancel"
-                tools:ignore="ButtonStyle" />
+            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
-
-</RelativeLayout>
+    </RelativeLayout>
+</layout>

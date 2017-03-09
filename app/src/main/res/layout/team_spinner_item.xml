@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by Ruslan Primak on 2/28/17 6:34 PM
+  ~ Created by Ruslan Primak on 3/9/17 9:59 PM
   ~ Copyright (c) 2017. All rights reserved.
   ~
-  ~ Last modified 2/28/17 6:16 PM
+  ~ Last modified 3/9/17 4:19 PM
   -->
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/team_spinner_item"
@@ -38,6 +37,5 @@
         android:contentDescription="@string/image_view_team_wordwark_cd"
         android:scaleType="fitStart"
         tools:src="@drawable/wordmark_1" />
-
 
 </RelativeLayout>

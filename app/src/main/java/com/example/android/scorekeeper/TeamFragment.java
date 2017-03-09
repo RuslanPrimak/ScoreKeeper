@@ -1,8 +1,8 @@
 /*
- * Created by Ruslan Primak on 2/28/17 6:34 PM
+ * Created by Ruslan Primak on 3/9/17 9:59 PM
  * Copyright (c) 2017. All rights reserved.
  *
- * Last modified 2/28/17 6:16 PM
+ * Last modified 3/9/17 9:54 PM
  */
 
 package com.example.android.scorekeeper;
@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-
+import com.google.auto.value.AutoValue;
 /**
  * A simple {@link Fragment} subclass representing module for maintaining a team score
  */
@@ -181,7 +181,7 @@ public class TeamFragment extends Fragment {
             // Fill array of resources IDs to be converted into list for ArrayAdapter
             final TeamLogo[] teamArray = new TeamLogo[arrayLogos.length()];
             for (int i = 0; i < teamArray.length; i++) {
-                teamArray[i] = new TeamLogo(arrayLogos.getResourceId(i, 0),
+                teamArray[i] = TeamLogo.create(arrayLogos.getResourceId(i, 0),
                         arrayWMarks.getResourceId(i, 0));
             }
 
@@ -268,21 +268,13 @@ public class TeamFragment extends Fragment {
     /**
      * Class for holding pair of logo and wordmark resource IDs of team
      */
-    private class TeamLogo {
-        private int logoID;
-        private int wordmarkID;
+    @AutoValue
+    abstract static class TeamLogo {
+        abstract int logoID();
+        abstract int wordmarkID();
 
-        TeamLogo(int logoID, int wordmarkID) {
-            this.logoID = logoID;
-            this.wordmarkID = wordmarkID;
-        }
-
-        int getLogoID() {
-            return logoID;
-        }
-
-        int getWordmarkID() {
-            return wordmarkID;
+        static TeamLogo create(int logoID, int wordmarkID) {
+            return new AutoValue_TeamFragment_TeamLogo(logoID, wordmarkID);
         }
     }
 
@@ -310,7 +302,6 @@ public class TeamFragment extends Fragment {
                                  boolean isDropDown) {
             final View view;
 
-
             if (position != 0) {
                 view = (convertView != null) && (convertView.getId() == R.id.team_spinner_item) ?
                         convertView :
@@ -327,9 +318,9 @@ public class TeamFragment extends Fragment {
                 TeamLogo tm = getItem(position);
                 if (tm != null) {
                     ((ImageView) view.findViewById(R.id.team_spinner_item_image_view_logo))
-                            .setImageResource(tm.getLogoID());
+                            .setImageResource(tm.logoID());
                     ((ImageView) view.findViewById(R.id.team_spinner_item_image_view_wordmark))
-                            .setImageResource(tm.getWordmarkID());
+                            .setImageResource(tm.wordmarkID());
                 }
             }
 
